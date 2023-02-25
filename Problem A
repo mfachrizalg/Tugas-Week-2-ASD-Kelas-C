@@ -1,13 +1,12 @@
 #include <iostream>
-#include <cmath>
+#include <cmath> //Untuk menggunakan sintaks sqrt()
 
 using namespace std;
 
 int main()
 {
 	cout<<"Mencari akar-akar dari persamaan kuadrat"<<endl;
-	int a,b,c;
-	double D,x1,x2;
+	double a,b,c,D,x1,x2; // variabel a,b,dan c dibuat tipe data double karena koefisien dari x^2, x, dan konstanta dari suatu persamaan kuadrat hanya bernilai real.
 	
 	//Memasukkan input
 	cout<<"\nMasukkan koefisien x^2 : ";
@@ -19,8 +18,8 @@ int main()
 	
 	//Menghitung Determinan
 	D = b*b - 4*a*c;
-	x1 = (double)-b/(double)(2*a) + sqrt(D)/(2*a);
-	x2 = (double)-b/(double)(2*a) - sqrt(D)/(2*a);
+	x1 = -b/(2*a) + sqrt(D)/(2*a);
+	x2 = -b/(2*a) - sqrt(D)/(2*a);
 	
 	//Mencari akar-akarnya
 	cout<<"\nAkar-akarnya yaitu : ";
@@ -35,7 +34,7 @@ int main()
 	}
 	else
 	{
-		cout<<"x1 = "<<(double)-b/(double)(2*a)<<"+"<<sqrt(-D)/(2*a)<<"*i";
-		cout<<", x2 = "<<(double)-b/(double)(2*a)<<"-"<<sqrt(-D)/(2*a)<<"*i";
+		cout<<"x1 = "<<-b/(2*a)<<"+"<<sqrt(-D)/(2*a)<<"*i"; // i = akar dari -1
+		cout<<", x2 = "<<-b/(2*a)<<"-"<<sqrt(-D)/(2*a)<<"*i";
 	}
 }
