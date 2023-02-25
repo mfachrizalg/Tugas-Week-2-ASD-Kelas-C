@@ -1,0 +1,41 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+	cout<<"Mencari akar-akar dari persamaan kuadrat"<<endl;
+	int a,b,c;
+	double D,x1,x2;
+	
+	//Memasukkan input
+	cout<<"\nMasukkan koefisien x^2 : ";
+	cin>>a;
+	cout<<"Masukkan koefisien x : ";
+	cin>>b;
+	cout<<"Masukkan konstanta : ";
+	cin>>c;
+	
+	//Menghitung Determinan
+	D = b*b - 4*a*c;
+	x1 = (double)-b/(double)(2*a) + sqrt(D)/(2*a);
+	x2 = (double)-b/(double)(2*a) - sqrt(D)/(2*a);
+	
+	//Mencari akar-akarnya
+	cout<<"\nAkar-akarnya yaitu : ";
+	if(D>0)
+	{
+		cout<<"x1 = "<<x1;
+		cout<<", x2 = "<<x2;
+	}
+	else if (D == 0)
+	{
+		cout<<"x = "<<x1;
+	}
+	else
+	{
+		cout<<"x1 = "<<(double)-b/(double)(2*a)<<"+"<<sqrt(-D)/(2*a)<<"*i";
+		cout<<", x2 = "<<(double)-b/(double)(2*a)<<"-"<<sqrt(-D)/(2*a)<<"*i";
+	}
+}
