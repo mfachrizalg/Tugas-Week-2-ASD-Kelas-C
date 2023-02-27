@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
 	cout<<"Mencari akar-akar dari persamaan kuadrat"<<endl;
-	double a,b,c,D,x1,x2; // variabel a,b,dan c dibuat tipe data double karena koefisien dari x^2, x, dan konstanta dari suatu persamaan kuadrat hanya bernilai real.
+	float a,b,c,D,x1,x2; // variabel a,b,dan c dibuat tipe data float karena koefisien dari x^2, x, dan konstanta dari suatu persamaan kuadrat hanya bernilai real.
 	
 	//Memasukkan input
 	cout<<"\nMasukkan koefisien x^2 : ";
@@ -34,7 +34,7 @@ int main()
 	}
 	else
 	{
-		cout<<"x1 = "<<-b/(2*a)<<"+"<<sqrt(-D)/(2*a)<<"*i"; // i = akar dari -1
-		cout<<", x2 = "<<-b/(2*a)<<"-"<<sqrt(-D)/(2*a)<<"*i";
+		cout<<"x1 = "<<-b/(2*a)<<" + i*"<<sqrt(-D)/(2*a); // i = akar dari -1
+		cout<<", x2 = "<<-b/(2*a)<<" - i*"<<sqrt(-D)/(2*a);
 	}
 }
