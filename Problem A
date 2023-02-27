@@ -34,7 +34,6 @@ int main()
 	}
 	else
 	{
-		D = -D;
 		cout<<"x1 = "<<-b/(2*a)<<" + i*"<<sqrt(-D)/(2*a); // i = akar dari -1
 		cout<<", x2 = "<<-b/(2*a)<<" - i*"<<sqrt(-D)/(2*a);
 	}
